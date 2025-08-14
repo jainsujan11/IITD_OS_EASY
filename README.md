@@ -8,22 +8,28 @@
 2) cd check_scripts_assg1
 3) bash check.sh assignment1_easy_2024AB.1234.tar.gz
 
-# Lets talk about xv6 main ( work in progress - not uploaded in repo )
+# Lets talk about xv6 main ( currently not uploaded in repo )
 
-1) Some new implementation/improvement of syscalls as compared to check_scripts_assg1
-    a) I have re-implemented sys_send and sys_recv using message queue for better performance 
-    b) Simplified the sys_multi_send removing the use of interupt handler 
+## Syscall Improvements (compared to `check_scripts_assg1`)
 
-2) Real Time Scheduling Implementation - A2 
-    a) System Calls:
-        sys_sched_policy(pid, policy) — Switch process to EDF, RMS, or default RR.
-        sys_exec_time(pid, exec_time) — Set execution time limit (process auto-terminated by kernel).
-        sys_deadline(pid, deadline) — Set relative deadline.
-        sys_rate(pid, rate) — Set RMS rate (in inv. seconds; determines priority).
+1. **`sys_send`** and **`sys_recv`**:  
+   Re-implemented using a message queue for better performance.
+2. **`sys_multi_send`**:  
+   Simplified implementation, removing the use of interrupt handler.
 
-    b) Kernel Extensions:
-        Added scheduling-related fields to struct proc.
+---
+
+## A2 — Real Time Scheduling Implementation
+
+### a) System Calls
+- `sys_sched_policy(pid, policy)` — Switch process to **EDF**, **RMS**, or default **RR**.
+- `sys_exec_time(pid, exec_time)` — Set execution time limit (process auto-terminated by kernel).
+- `sys_deadline(pid, deadline)` — Set relative deadline.
+- `sys_rate(pid, rate)` — Set RMS rate (in inv. seconds; determines priority).
+
+### b) Kernel Extensions
+- Added scheduling-related fields to `struct proc`.
 
 # A3 
 
-1) Currently doing Part-1 of assignment related to buffer attack, but got no success 
+1) Currently doing Part-1 of assignment-3 related to buffer attack, but got no success 
