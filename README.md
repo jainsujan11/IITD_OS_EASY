@@ -8,7 +8,7 @@
 2) cd check_scripts_assg1
 3) bash check.sh assignment1_easy_2024AB.1234.tar.gz
 
-# Lets talk about xv6 main ( currently not uploaded in repo )
+# Lets talk about xv6 main 
 
 ## Syscall Improvements (compared to `check_scripts_assg1`)
 
